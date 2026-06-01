@@ -1,0 +1,11 @@
+services:
+  nohrs:
+    build:
+      context: ../..
+      dockerfile: docker/ci/Dockerfile
+    environment:
+      - DISPLAY=:99
+    volumes:
+      - ../..:/nohrs
+      - ~/.cargo/registry:/root/.cargo/registry
+    command: bash -c "Xvfb :99 -screen 0 1280x800x24 & sleep 1 && cargo test"
