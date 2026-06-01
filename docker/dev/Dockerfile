@@ -2,7 +2,7 @@ FROM debian:bookworm
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential pkg-config curl ca-certificates \
-    libxkbcommon-dev libwayland-dev \
+    libxkbcommon-dev libxkbcommon-x11-dev libwayland-dev \
     libxcb-shape0-dev libxcb-xfixes0-dev libxcb1-dev libx11-dev \
     libfontconfig1-dev libfreetype6-dev \
     libgl1-mesa-dev libegl1-mesa-dev libvulkan-dev \
