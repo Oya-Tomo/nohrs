@@ -9,4 +9,4 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - ${XAUTHORITY:-/dev/null}:/root/.Xauthority:ro
       - ../..:/nohrs
-      - ~/.cargo/registry:/root/.cargo/registry
+      - ${HOME}/.cargo/registry:/root/.cargo/registry
